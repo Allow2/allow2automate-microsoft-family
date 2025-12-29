@@ -23,7 +23,7 @@ export default {
             preferBuiltins: true
         }),
         commonjs({
-            include: 'node_modules/**'
+            include: ['node_modules/**', 'src/services/**']
         }),
         babel({
             babelHelpers: 'runtime',

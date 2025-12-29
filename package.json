@@ -1,6 +1,6 @@
 {
   "name": "@allow2/allow2automate-microsoft-family",
-  "shortName": "microsoft-family-safety",
+  "shortName": "Microsoft Family Safety",
   "version": "0.0.1",
   "description": "Enable Allow2Automate management of Microsoft Family Safety parental controls",
   "main": "dist/index.js",
@@ -8,7 +8,7 @@
   "jsnext:main": "dist/index.es.js",
   "scripts": {
     "test": "mocha tests/**/*.test.js",
-    "build": "rollup -c",
+    "build": "rollup -c && cp -r src/services dist/",
     "start": "rollup -c -w",
     "prepublish": "npm run build"
   },
@@ -39,7 +39,7 @@
     "plugin": true,
     "pluginId": "allow2automate-microsoft-family",
     "displayName": "Microsoft Family Safety",
-    "category": "Family Safety",
+    "category": "parental-controls",
     "permissions": [
       "network",
       "configuration"
@@ -89,6 +89,7 @@
   },
   "files": [
     "dist",
+    "dist/services",
     "img"
   ],
   "devDependencies": {
